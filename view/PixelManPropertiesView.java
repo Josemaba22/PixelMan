@@ -24,15 +24,13 @@ public class PixelManPropertiesView extends JPanel{
     public JSpinner y;
     public JSpinner width;
     public JSpinner height;
-    public JSpinner pixelWidth;
-    public JSpinner pixelHeight;
+    public JSpinner pixelSize;
 
     public JLabel xLabel;
     public JLabel yLabel;
     public JLabel widthLabel;
     public JLabel heightLabel;
-    public JLabel pixelWidthLabel;
-    public JLabel pixelHeightLabel;
+    public JLabel pixelSizeLabel;
 
     public Color colorPrimario = new Color(0x666f7f);
     public Color colorSecundario = new Color(0x262d3d);
@@ -53,15 +51,13 @@ public class PixelManPropertiesView extends JPanel{
         y = new JSpinner();
         width = new JSpinner();
         height = new JSpinner();
-        pixelWidth = new JSpinner();
-        pixelHeight = new JSpinner();
+        pixelSize = new JSpinner();
 
         xLabel = new JLabel("X:");
         yLabel = new JLabel("Y:");
         widthLabel = new JLabel("Width:");
         heightLabel = new JLabel("Height:");
-        pixelWidthLabel = new JLabel("Pixel Width:");
-        pixelHeightLabel = new JLabel("Pixel Height:");
+        pixelSizeLabel = new JLabel("Pixel Size:");
 
         add(xLabel);
         add(x);
@@ -71,10 +67,8 @@ public class PixelManPropertiesView extends JPanel{
         add(width);
         add(heightLabel);
         add(height);
-        add(pixelWidthLabel);
-        add(pixelWidth);
-        add(pixelHeightLabel);
-        add(pixelHeight);
+        add(pixelSizeLabel);
+        add(pixelSize);
 
     }
 

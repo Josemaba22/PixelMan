@@ -88,12 +88,8 @@ public class PixelManPorpertiesController implements MouseMotionListener, KeyLis
         model = (SpinnerNumberModel) pixelManPropertiesView.height.getModel();
         model.setStepSize(pixelMan.getPixelHeight());
 
-        pixelManPropertiesView.pixelHeight.setValue(pixelMan.getPixelHeight());
-        model = (SpinnerNumberModel) pixelManPropertiesView.pixelHeight.getModel();
-        model.setStepSize(1);
-
-        pixelManPropertiesView.pixelWidth.setValue(pixelMan.getPixelWidth());
-        model = (SpinnerNumberModel) pixelManPropertiesView.pixelWidth.getModel();
+        pixelManPropertiesView.pixelSize.setValue(pixelMan.getPixelHeight());
+        model = (SpinnerNumberModel) pixelManPropertiesView.pixelSize.getModel();
         model.setStepSize(1);
     }
 
@@ -132,18 +128,11 @@ public class PixelManPorpertiesController implements MouseMotionListener, KeyLis
             }
         });
 
-        pixelManPropertiesView.pixelHeight.addChangeListener(new ChangeListener() {
+        pixelManPropertiesView.pixelSize.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
-                pixelMan.setPixelHeight(Integer.parseInt(pixelManPropertiesView.pixelHeight.getValue().toString()));
-                pixelMan.getMyFrame().repaint();
-            }
-        });
-
-        pixelManPropertiesView.pixelWidth.addChangeListener(new ChangeListener() {
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                pixelMan.setPixelWidth(Integer.parseInt(pixelManPropertiesView.pixelWidth.getValue().toString()));
+                pixelMan.setPixelHeight(Integer.parseInt(pixelManPropertiesView.pixelSize.getValue().toString()));
+                pixelMan.setPixelWidth(Integer.parseInt(pixelManPropertiesView.pixelSize.getValue().toString()));
                 pixelMan.getMyFrame().repaint();
             }
         });
@@ -186,7 +175,6 @@ public class PixelManPorpertiesController implements MouseMotionListener, KeyLis
                 pixelMan.requestFocus();
             }
         });
-        pixelMan.setFocusable(true);
     }
 
     @Override

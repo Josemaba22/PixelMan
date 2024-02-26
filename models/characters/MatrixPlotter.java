@@ -129,5 +129,10 @@ public class MatrixPlotter extends JPanel {
     public void setPixelHeight(int pixelHeight) {
         this.pixelHeight = pixelHeight;
     }
+
+    public void setPixelSize(int pixelSize) {
+        this.pixelWidth = pixelSize;
+        this.pixelHeight = pixelSize;
+    }
      
 }

@@ -49,7 +49,7 @@ public class PixelMan extends MatrixPlotter{
         setVisible(true);
         setFocusable(true);
         requestFocus();
-         
+        setBackground(Color.BLACK);
     }
 
     public void setMyFrame(MyFrame myFrame) {
